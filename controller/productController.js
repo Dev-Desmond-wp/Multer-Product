@@ -36,7 +36,7 @@ exports.getAllproducts = async (req, res) => {
             data: products
         })
     } catch (error) {
-        res.status(500).jso({
+        res.status(500).json({
             message: error.message
         })
     }
