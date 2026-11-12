@@ -117,7 +117,7 @@ exports.deleteProduct = async (req, res) => {
         const oldfilePath = product.productImage;
         fs.unlinkSync(oldfilePath);
 
-        await product.destroy({ where: { id }})
+        await product.destroy()
 
         res.status(200).json({
             message: 'Product deleted successfully'
